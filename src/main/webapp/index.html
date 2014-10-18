@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>MxCalculator</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="header">
+            <input type="text" id="txtExpression"/>
+            <button id="btnCalculate">Calculate</button>
+            <button id="btnSave">Save Session</button>
+        </div>
+        <input type="text" id="txtResult"/>
+        <div class="leftArea">
+            <ul id="ulCalculationsList"></ul>
+        </div>
+        <div class="mainArea">
+            <label>Sessions</label>
+            <div class="header">
+                <label for="txtSessionId">Type a session id</label>
+                <input type="text" id="txtSessionId"/>
+                <button id="btnRetrieve">Search</button>
+            </div>
+            <ul id="ulSessionsList"></ul>
+        </div>
+        <div class="rightArea">
+            <label>Session calculations</label>
+            <ul id="ulEntriesList"></ul>
+        </div>
+        <script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="application/javascript" src="mxcalculator.js"></script>
+    </body>
+</html>

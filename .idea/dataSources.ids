@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="H2 - MxCalculator" uuid="a26086c7-0f04-4b78-80ad-5c2ae5c12a42">
+    <database-info product="H2" version="1.3.175 (2014-01-18)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.175 (2014-01-18)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="REPOSITORY"/>
+    <table name="SESSIONS" schema="PUBLIC" catalog="REPOSITORY" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMzNFMDQ3NUFfMTFFMl80N0IxX0FFRTBfQTY5MkUxMzc1NjEyKQ==" autoIncrement="true"/>
+      <column name="CREATION_DATETIME" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93"/>
+      <column name="UPDATED_DATETIME" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93"/>
+      <primary-key name="CONSTRAINT_8" columns="ID"/>
+      <exported-key name="FK_38VY9Q2A2SCM7V1QLW6G9JOIM" table="SESSION_ENTRIES" schema="PUBLIC" catalog="REPOSITORY" columns="SESSION"/>
+    </table>
+    <table name="SESSION_ENTRIES" schema="PUBLIC" catalog="REPOSITORY" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMzlEQjI4RURfRUNBM180MjZFXzlDQzhfM0FBRTAyMDQ5NDAxKQ==" autoIncrement="true"/>
+      <column name="CREATION_DATETIME" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93"/>
+      <column name="EXPRESSION" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RESULT" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="UPDATED_DATETIME" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93"/>
+      <column name="SESSION" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_3" columns="ID"/>
+      <foreign-key name="FK_38VY9Q2A2SCM7V1QLW6G9JOIM" columns="SESSION" ref-table="SESSIONS" ref-schema="PUBLIC" ref-catalog="REPOSITORY" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <index name="FK_38VY9Q2A2SCM7V1QLW6G9JOIM_INDEX_3" unique="false" columns="SESSION"/>
+    </table>
+  </data-source>
+</component>
